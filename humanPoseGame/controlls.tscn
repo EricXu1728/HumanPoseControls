@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://bges3iya602fm"]
+
+[ext_resource type="Script" uid="uid://r6otog7xbl3w" path="res://Node3d.cs" id="1_o4hj3"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_o4hj3"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_t6b0w"]
+
+[node name="Controls" type="Node3D"]
+script = ExtResource("1_o4hj3")
+
+[node name="right" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="right"]
+mesh = SubResource("SphereMesh_o4hj3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="right"]
+shape = SubResource("SphereShape3D_t6b0w")
+
+[node name="left" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="left"]
+mesh = SubResource("SphereMesh_o4hj3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="left"]
+shape = SubResource("SphereShape3D_t6b0w")
