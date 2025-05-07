@@ -41,10 +41,14 @@ public partial class Testplayer : CharacterBody3D
 			{
 				// Direction from player to object (horizontal only)
 				Vector3 pushDir = (body.GlobalTransform.Origin - GlobalTransform.Origin);
-				pushDir.Y = 0;
+				//Vector3 pushDir = (body.GlobalTransform.Origin - GlobalTransform.Origin + body.CenterOfMass);
+				//pushDir.Y = 0;
 				pushDir = pushDir.Normalized();
 
-				body.ApplyCentralImpulse(pushDir * PushForce);
+				//body.ApplyTorqueImpulse(pushDir * PushForce);
+				//GD.Print("Push");
+				
+				body.ApplyImpulse(pushDir * PushForce, collision.GetPosition() - body.GlobalPosition);
 			}
 		}
 	}

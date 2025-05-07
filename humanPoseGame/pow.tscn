@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpxc0fsjjmf68"]
+
+[ext_resource type="Script" uid="uid://pm0m7pvjcppr" path="res://pow.gd" id="1_0h3cu"]
+[ext_resource type="Texture2D" uid="uid://tyml5q4yserf" path="res://icon.svg" id="2_hhc83"]
+
+[node name="pow" type="Node3D"]
+script = ExtResource("1_0h3cu")
+
+[node name="particleSprite" type="Sprite3D" parent="."]
+cast_shadow = 0
+billboard = 1
+double_sided = false
+no_depth_test = true
+texture = ExtResource("2_hhc83")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.7
+one_shot = true

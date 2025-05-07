@@ -1,18 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://clxmiewtjcs3r"]
+[gd_scene load_steps=4 format=3 uid="uid://clxmiewtjcs3r"]
+
+[ext_resource type="Script" uid="uid://bihcsnnlf83yu" path="res://Dummy.cs" id="1_gtj52"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gcxmu"]
+radius = 1.0
+height = 4.0
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_gtj52"]
 
 [node name="dummy" type="Node3D"]
 
 [node name="RigidBody3D" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.13189, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.15554, 0)
+gravity_scale = 4.0
 center_of_mass_mode = 1
-center_of_mass = Vector3(0, -5, 0)
+center_of_mass = Vector3(0, -10, 0)
+linear_damp = 10.0
+angular_damp = 0.1
+script = ExtResource("1_gtj52")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_gcxmu")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 mesh = SubResource("CapsuleMesh_gtj52")

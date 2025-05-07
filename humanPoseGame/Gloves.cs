@@ -4,18 +4,24 @@ using System.Net.Sockets;
 using System.IO;
 using System.Text.Json;
 
-public partial class Node3d : Node3D
+public partial class Gloves : Node3D
 {
+	
 	public CharacterBody3D leftHand;
 	public CharacterBody3D rightHand;
 
 	private TcpClient client;
 	private StreamReader reader;
-
+	private PackedScene powScene = GD.Load<PackedScene>("res://pow.tscn");
+	
+	[Export] public float width = 15.0f;
 	[Export] public float PushForce = 3.0f; // How hard the hands push
+	[Export] public float velocityMult = 5.0f;
+	[Export] public float SpawnVelocityThreshold = 12.0f;
 
 	public override void _Ready()
 	{
+		GD.Print("Starting");
 		leftHand = GetNode<CharacterBody3D>("left");
 		rightHand = GetNode<CharacterBody3D>("right");
 
@@ -44,7 +50,10 @@ public partial class Node3d : Node3D
 
 	public override void _Process(double delta)
 	{
-		if (reader == null || reader.EndOfStream) return;
+		if (reader == null || reader.EndOfStream){
+			GD.Print("nothing recieved");
+			return;
+		}
 
 		try
 		{
@@ -52,14 +61,14 @@ public partial class Node3d : Node3D
 			if (json != null)
 			{
 				var poseData = JsonSerializer.Deserialize<HandPose>(json);
-				Vector3 nextLeft = new Vector3((float)poseData.left[0] * 20, (float)poseData.left[1] * 20, 0);
-				Vector3 nextRight = new Vector3((float)poseData.right[0] * 20, (float)poseData.right[1] * 20, 0);
+				Vector3 nextLeft = new Vector3((float)poseData.left[0] * width, (float)poseData.left[1] * width, 0);
+				Vector3 nextRight = new Vector3((float)poseData.right[0] * width, (float)poseData.right[1] * width, 0);
 
 				Vector3 leftVelocity = nextLeft - leftHand.Position;
 				Vector3 rightVelocity = nextRight - rightHand.Position;
 
-				leftHand.Velocity = leftVelocity * 2;
-				rightHand.Velocity = rightVelocity * 2;
+				leftHand.Velocity = leftVelocity * velocityMult;
+				rightHand.Velocity = rightVelocity * velocityMult;
 			}
 		}
 		catch (Exception e)
@@ -71,21 +80,36 @@ public partial class Node3d : Node3D
 
 	// Handle pushing RigidBodies in the vicinity of the hand
 	private void PushRigidBodies(CharacterBody3D hand)
+{
+	for (int i = 0; i < hand.GetSlideCollisionCount(); i++)
 	{
-		for (int i = 0; i < hand.GetSlideCollisionCount(); i++)
+		KinematicCollision3D collision = hand.GetSlideCollision(i);
+		if (collision.GetCollider() is RigidBody3D body)
 		{
-			KinematicCollision3D collision = hand.GetSlideCollision(i);
-			if (collision.GetCollider() is RigidBody3D body)
-			{
-				Vector3 pushDir = -collision.GetNormal(); // Direction to push
-				body.ApplyImpulse(pushDir * PushForce, collision.GetPosition() - body.GlobalPosition);
+			Vector3 pushDir = -collision.GetNormal(); // Direction to push
+			body.ApplyImpulse(pushDir * PushForce, collision.GetPosition() - body.GlobalPosition);
+
+			// Spawn "pow" node on collision
+			GD.Print(hand.Velocity.Length());
+			if (hand.Velocity.Length() > SpawnVelocityThreshold){
+				
+			
+				Node3D powInstance = (Node3D)powScene.Instantiate();
+				powInstance.GlobalPosition = collision.GetPosition();
+
+				Vector3 upwardsVelocity = -collision.GetNormal().Normalized();
+				powInstance.Call("set_velocity", upwardsVelocity * velocityMult);
+
+				GetTree().CurrentScene.AddChild(powInstance);
 			}
 		}
 	}
+}
+
 
 	private void CleanupAndFree()
 	{
-		try
+		try	
 		{
 			reader?.Close();
 			client?.Close();
