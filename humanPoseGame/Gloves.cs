@@ -17,7 +17,7 @@ public partial class Gloves : Node3D
 	[Export] public float width = 15.0f;
 	[Export] public float PushForce = 3.0f; // How hard the hands push
 	[Export] public float velocityMult = 5.0f;
-	[Export] public float SpawnVelocityThreshold = 12.0f;
+	[Export] public float SpawnVelocityThreshold = 22.0f;
 
 	public override void _Ready()
 	{

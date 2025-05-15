@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dpxc0fsjjmf68"]
 
 [ext_resource type="Script" uid="uid://pm0m7pvjcppr" path="res://pow.gd" id="1_0h3cu"]
-[ext_resource type="Texture2D" uid="uid://tyml5q4yserf" path="res://icon.svg" id="2_hhc83"]
+[ext_resource type="Texture2D" uid="uid://ci4s6pe3movqc" path="res://39f04ad47df99101d713aa1c7bfe3a72-pow-sticker.webp" id="2_hhc83"]
 
 [node name="pow" type="Node3D"]
 script = ExtResource("1_0h3cu")
