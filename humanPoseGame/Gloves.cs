@@ -14,7 +14,8 @@ public partial class Gloves : Node3D
 	private StreamReader reader;
 	private PackedScene powScene = GD.Load<PackedScene>("res://pow.tscn");
 	
-	[Export] public float width = 15.0f;
+	[Export] public float width = 30.0f;
+	[Export] public float depth = 30.0f;
 	[Export] public float PushForce = 3.0f; // How hard the hands push
 	[Export] public float velocityMult = 5.0f;
 	[Export] public float SpawnVelocityThreshold = 22.0f;
@@ -49,62 +50,74 @@ public partial class Gloves : Node3D
 	}
 
 	public override void _Process(double delta)
+{
+	if (reader == null || reader.EndOfStream)
 	{
-		if (reader == null || reader.EndOfStream){
-			GD.Print("nothing recieved");
-			return;
-		}
+		GD.Print("nothing received");
+		return;
+	}
 
-		try
+	try
+	{
+		string json = reader.ReadLine();
+		if (json != null)
 		{
-			string json = reader.ReadLine();
-			if (json != null)
-			{
-				var poseData = JsonSerializer.Deserialize<HandPose>(json);
-				Vector3 nextLeft = new Vector3((float)poseData.left[0] * width, (float)poseData.left[1] * width, 0);
-				Vector3 nextRight = new Vector3((float)poseData.right[0] * width, (float)poseData.right[1] * width, 0);
+			var poseData = JsonSerializer.Deserialize<HandPose>(json);
 
-				Vector3 leftVelocity = nextLeft - leftHand.Position;
-				Vector3 rightVelocity = nextRight - rightHand.Position;
+			// Use all three coordinates (x,y,z), scaling by width or directly
+			Vector3 nextLeft = new Vector3(
+				(float)poseData.left[0] * width, 
+				(float)poseData.left[1] * width, 
+				(float)poseData.left[2] * depth  // Use z dimension
+			);
+			Vector3 nextRight = new Vector3(
+				(float)poseData.right[0] * width, 
+				(float)poseData.right[1] * width, 
+				(float)poseData.right[2] * depth
+			);
 
-				leftHand.Velocity = leftVelocity * velocityMult;
-				rightHand.Velocity = rightVelocity * velocityMult;
-			}
-		}
-		catch (Exception e)
-		{
-			GD.PrintErr("Error reading pose data: ", e.Message);
-			CleanupAndFree();
+			Vector3 leftVelocity = nextLeft - leftHand.Position;
+			Vector3 rightVelocity = nextRight - rightHand.Position;
+
+			leftHand.Velocity = leftVelocity * velocityMult;
+			rightHand.Velocity = rightVelocity * velocityMult;
 		}
 	}
+	catch (Exception e)
+	{
+		GD.PrintErr("Error reading pose data: ", e.Message);
+		CleanupAndFree();
+	}
+}
+
 
 	// Handle pushing RigidBodies in the vicinity of the hand
 	private void PushRigidBodies(CharacterBody3D hand)
-{
-	for (int i = 0; i < hand.GetSlideCollisionCount(); i++)
 	{
-		KinematicCollision3D collision = hand.GetSlideCollision(i);
-		if (collision.GetCollider() is RigidBody3D body)
+		for (int i = 0; i < hand.GetSlideCollisionCount(); i++)
 		{
-			Vector3 pushDir = -collision.GetNormal(); // Direction to push
-			body.ApplyImpulse(pushDir * PushForce, collision.GetPosition() - body.GlobalPosition);
+			KinematicCollision3D collision = hand.GetSlideCollision(i);
+			if (collision.GetCollider() is RigidBody3D body)
+			{
+				Vector3 pushDir = -collision.GetNormal(); // Direction to push
+				body.ApplyImpulse(pushDir * PushForce, collision.GetPosition() - body.GlobalPosition);
 
-			// Spawn "pow" node on collision
-			GD.Print(hand.Velocity.Length());
-			if (hand.Velocity.Length() > SpawnVelocityThreshold){
+				// Spawn "pow" node on collision
+				GD.Print(hand.Velocity.Length());
+				if (hand.Velocity.Length() > SpawnVelocityThreshold){
+					
 				
-			
-				Node3D powInstance = (Node3D)powScene.Instantiate();
-				powInstance.GlobalPosition = collision.GetPosition();
+					Node3D powInstance = (Node3D)powScene.Instantiate();
+					powInstance.GlobalPosition = collision.GetPosition();
 
-				Vector3 upwardsVelocity = -collision.GetNormal().Normalized();
-				powInstance.Call("set_velocity", upwardsVelocity * velocityMult);
+					Vector3 upwardsVelocity = -collision.GetNormal().Normalized();
+					powInstance.Call("set_velocity", upwardsVelocity * velocityMult);
 
-				GetTree().CurrentScene.AddChild(powInstance);
+					GetTree().CurrentScene.AddChild(powInstance);
+				}
 			}
 		}
 	}
-}
 
 
 	private void CleanupAndFree()

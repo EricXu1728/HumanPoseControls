@@ -28,7 +28,8 @@ size = Vector3(50, 1, 50)
 environment = SubResource("Environment_qtnh1")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 11.0286, 21.1668)
+transform = Transform3D(1, 0, 0, 0, 0.927823, 0.37302, 0, -0.37302, 0.927823, 0, 18.2136, 46.4258)
+size = 57.441
 
 [node name="Area3D" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -16.1778, 0)
@@ -45,7 +46,7 @@ skeleton = NodePath("../CollisionShape3D")
 transform = Transform3D(0.955313, -0.213353, 0.204592, -0.295439, -0.711743, 0.637289, 0.0096492, -0.669255, -0.74297, 0, 1.03497, 0)
 
 [node name="Controls" parent="." instance=ExtResource("1_ulcgi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.36185, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.12139, 9.85926)
 
 [node name="dummy" parent="." instance=ExtResource("2_nxogm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2.84097, 0)
