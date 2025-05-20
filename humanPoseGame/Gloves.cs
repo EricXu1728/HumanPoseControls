@@ -10,6 +10,8 @@ public partial class Gloves : Node3D
 	public CharacterBody3D leftHand;
 	public CharacterBody3D rightHand;
 
+	private int messageIndex = 0;
+
 	private TcpClient client;
 	private StreamReader reader;
 	private PackedScene powScene = GD.Load<PackedScene>("res://pow.tscn");
@@ -81,6 +83,9 @@ public partial class Gloves : Node3D
 
 			leftHand.Velocity = leftVelocity * velocityMult;
 			rightHand.Velocity = rightVelocity * velocityMult;
+			
+			long timestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+			GD.Print($"Parsed pose #{messageIndex++} at {timestamp} ms");
 		}
 	}
 	catch (Exception e)

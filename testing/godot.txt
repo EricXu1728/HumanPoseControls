@@ -1,0 +1,465 @@
+Godot Engine v4.4.1.stable.mono.official.49a5bc7b6 - https://godotengine.org
+Vulkan 1.4.303 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce RTX 3050 Ti Laptop GPU
+
+Starting
+Connected to Python
+Parsed pose #0 at 1747660606648 ms
+Parsed pose #1 at 1747660606725 ms
+Parsed pose #2 at 1747660606809 ms
+Parsed pose #3 at 1747660606899 ms
+Parsed pose #4 at 1747660606985 ms
+Parsed pose #5 at 1747660607066 ms
+Parsed pose #6 at 1747660607144 ms
+Parsed pose #7 at 1747660607221 ms
+Parsed pose #8 at 1747660607300 ms
+Parsed pose #9 at 1747660607390 ms
+Parsed pose #10 at 1747660607484 ms
+Parsed pose #11 at 1747660607563 ms
+Parsed pose #12 at 1747660607650 ms
+Parsed pose #13 at 1747660607740 ms
+Parsed pose #14 at 1747660607822 ms
+Parsed pose #15 at 1747660607899 ms
+Parsed pose #16 at 1747660607979 ms
+Parsed pose #17 at 1747660608057 ms
+Parsed pose #18 at 1747660608135 ms
+Parsed pose #19 at 1747660608224 ms
+Parsed pose #20 at 1747660608311 ms
+Parsed pose #21 at 1747660608391 ms
+Parsed pose #22 at 1747660608487 ms
+Parsed pose #23 at 1747660608583 ms
+Parsed pose #24 at 1747660608673 ms
+Parsed pose #25 at 1747660608762 ms
+Parsed pose #26 at 1747660608838 ms
+Parsed pose #27 at 1747660608931 ms
+Parsed pose #28 at 1747660609024 ms
+Parsed pose #29 at 1747660609105 ms
+Parsed pose #30 at 1747660609197 ms
+Parsed pose #31 at 1747660609287 ms
+Parsed pose #32 at 1747660609378 ms
+pow
+Parsed pose #33 at 1747660609472 ms
+Parsed pose #34 at 1747660609570 ms
+Parsed pose #35 at 1747660609668 ms
+Parsed pose #36 at 1747660609753 ms
+Parsed pose #37 at 1747660609832 ms
+Parsed pose #38 at 1747660609933 ms
+Parsed pose #39 at 1747660610034 ms
+Parsed pose #40 at 1747660610120 ms
+Parsed pose #41 at 1747660610212 ms
+Parsed pose #42 at 1747660610308 ms
+Parsed pose #43 at 1747660610396 ms
+Parsed pose #44 at 1747660610476 ms
+Parsed pose #45 at 1747660610562 ms
+Parsed pose #46 at 1747660610653 ms
+Parsed pose #47 at 1747660610742 ms
+Parsed pose #48 at 1747660610833 ms
+Parsed pose #49 at 1747660610935 ms
+Parsed pose #50 at 1747660611027 ms
+Parsed pose #51 at 1747660611128 ms
+Parsed pose #52 at 1747660611217 ms
+Parsed pose #53 at 1747660611310 ms
+Parsed pose #54 at 1747660611431 ms
+Parsed pose #55 at 1747660611541 ms
+Parsed pose #56 at 1747660611620 ms
+Parsed pose #57 at 1747660611707 ms
+Parsed pose #58 at 1747660611791 ms
+Parsed pose #59 at 1747660611878 ms
+Parsed pose #60 at 1747660611957 ms
+Parsed pose #61 at 1747660612043 ms
+Parsed pose #62 at 1747660612133 ms
+Parsed pose #63 at 1747660612226 ms
+Parsed pose #64 at 1747660612330 ms
+Parsed pose #65 at 1747660612420 ms
+Parsed pose #66 at 1747660612528 ms
+Parsed pose #67 at 1747660612618 ms
+Parsed pose #68 at 1747660612715 ms
+Parsed pose #69 at 1747660612807 ms
+Parsed pose #70 at 1747660612888 ms
+Parsed pose #71 at 1747660612969 ms
+Parsed pose #72 at 1747660613060 ms
+Parsed pose #73 at 1747660613156 ms
+Parsed pose #74 at 1747660613247 ms
+Parsed pose #75 at 1747660613339 ms
+Parsed pose #76 at 1747660613437 ms
+Parsed pose #77 at 1747660613528 ms
+Parsed pose #78 at 1747660613624 ms
+Parsed pose #79 at 1747660613723 ms
+Parsed pose #80 at 1747660613820 ms
+Parsed pose #81 at 1747660613912 ms
+Parsed pose #82 at 1747660614009 ms
+Parsed pose #83 at 1747660614099 ms
+Parsed pose #84 at 1747660614192 ms
+Parsed pose #85 at 1747660614286 ms
+Parsed pose #86 at 1747660614379 ms
+Parsed pose #87 at 1747660614472 ms
+Parsed pose #88 at 1747660614565 ms
+Parsed pose #89 at 1747660614664 ms
+Parsed pose #90 at 1747660614748 ms
+Parsed pose #91 at 1747660614844 ms
+Parsed pose #92 at 1747660614935 ms
+Parsed pose #93 at 1747660615026 ms
+Parsed pose #94 at 1747660615115 ms
+Parsed pose #95 at 1747660615212 ms
+Parsed pose #96 at 1747660615301 ms
+Parsed pose #97 at 1747660615403 ms
+Parsed pose #98 at 1747660615504 ms
+Parsed pose #99 at 1747660615598 ms
+Parsed pose #100 at 1747660615694 ms
+Parsed pose #101 at 1747660615780 ms
+Parsed pose #102 at 1747660615874 ms
+Parsed pose #103 at 1747660615989 ms
+Parsed pose #104 at 1747660616113 ms
+Parsed pose #105 at 1747660616208 ms
+Parsed pose #106 at 1747660616287 ms
+Parsed pose #107 at 1747660616378 ms
+Parsed pose #108 at 1747660616455 ms
+Parsed pose #109 at 1747660616550 ms
+Parsed pose #110 at 1747660616637 ms
+Parsed pose #111 at 1747660616722 ms
+Parsed pose #112 at 1747660616813 ms
+Parsed pose #113 at 1747660616904 ms
+Parsed pose #114 at 1747660616995 ms
+Parsed pose #115 at 1747660617087 ms
+Parsed pose #116 at 1747660617181 ms
+Parsed pose #117 at 1747660617274 ms
+Parsed pose #118 at 1747660617365 ms
+Parsed pose #119 at 1747660617458 ms
+Parsed pose #120 at 1747660617547 ms
+Parsed pose #121 at 1747660617633 ms
+Parsed pose #122 at 1747660617723 ms
+Parsed pose #123 at 1747660617808 ms
+Parsed pose #124 at 1747660617889 ms
+Parsed pose #125 at 1747660617979 ms
+Parsed pose #126 at 1747660618070 ms
+Parsed pose #127 at 1747660618162 ms
+Parsed pose #128 at 1747660618258 ms
+Parsed pose #129 at 1747660618341 ms
+Parsed pose #130 at 1747660618427 ms
+Parsed pose #131 at 1747660618523 ms
+Parsed pose #132 at 1747660618610 ms
+Parsed pose #133 at 1747660618713 ms
+Parsed pose #134 at 1747660618799 ms
+Parsed pose #135 at 1747660618898 ms
+Parsed pose #136 at 1747660618990 ms
+Parsed pose #137 at 1747660619116 ms
+Parsed pose #138 at 1747660619216 ms
+Parsed pose #139 at 1747660619309 ms
+Parsed pose #140 at 1747660619398 ms
+Parsed pose #141 at 1747660619495 ms
+Parsed pose #142 at 1747660619586 ms
+Parsed pose #143 at 1747660619683 ms
+Parsed pose #144 at 1747660619772 ms
+Parsed pose #145 at 1747660619865 ms
+Parsed pose #146 at 1747660619948 ms
+Parsed pose #147 at 1747660620045 ms
+Parsed pose #148 at 1747660620138 ms
+Parsed pose #149 at 1747660620230 ms
+Parsed pose #150 at 1747660620329 ms
+Parsed pose #151 at 1747660620416 ms
+Parsed pose #152 at 1747660620508 ms
+Parsed pose #153 at 1747660620606 ms
+Parsed pose #154 at 1747660620693 ms
+Parsed pose #155 at 1747660620788 ms
+Parsed pose #156 at 1747660620882 ms
+Parsed pose #157 at 1747660620969 ms
+Parsed pose #158 at 1747660621063 ms
+Parsed pose #159 at 1747660621157 ms
+Parsed pose #160 at 1747660621249 ms
+Parsed pose #161 at 1747660621354 ms
+Parsed pose #162 at 1747660621478 ms
+Parsed pose #163 at 1747660621579 ms
+Parsed pose #164 at 1747660621663 ms
+Parsed pose #165 at 1747660621764 ms
+Parsed pose #166 at 1747660621852 ms
+Parsed pose #167 at 1747660621944 ms
+Parsed pose #168 at 1747660622050 ms
+Parsed pose #169 at 1747660622148 ms
+Parsed pose #170 at 1747660622238 ms
+Parsed pose #171 at 1747660622316 ms
+Parsed pose #172 at 1747660622396 ms
+Parsed pose #173 at 1747660622488 ms
+Parsed pose #174 at 1747660622578 ms
+Parsed pose #175 at 1747660622670 ms
+Parsed pose #176 at 1747660622766 ms
+Parsed pose #177 at 1747660622853 ms
+Parsed pose #178 at 1747660622927 ms
+Parsed pose #179 at 1747660623024 ms
+Parsed pose #180 at 1747660623101 ms
+Parsed pose #181 at 1747660623192 ms
+Parsed pose #182 at 1747660623270 ms
+Parsed pose #183 at 1747660623369 ms
+Parsed pose #184 at 1747660623454 ms
+Parsed pose #185 at 1747660623540 ms
+Parsed pose #186 at 1747660623621 ms
+Parsed pose #187 at 1747660623719 ms
+Parsed pose #188 at 1747660623816 ms
+Parsed pose #189 at 1747660623910 ms
+Parsed pose #190 at 1747660624009 ms
+Parsed pose #191 at 1747660624095 ms
+Parsed pose #192 at 1747660624197 ms
+Parsed pose #193 at 1747660624292 ms
+Parsed pose #194 at 1747660624393 ms
+Parsed pose #195 at 1747660624475 ms
+Parsed pose #196 at 1747660624563 ms
+Parsed pose #197 at 1747660624659 ms
+Parsed pose #198 at 1747660624761 ms
+Parsed pose #199 at 1747660624845 ms
+Parsed pose #200 at 1747660624938 ms
+Parsed pose #201 at 1747660625022 ms
+Parsed pose #202 at 1747660625111 ms
+Parsed pose #203 at 1747660625211 ms
+Parsed pose #204 at 1747660625304 ms
+Parsed pose #205 at 1747660625390 ms
+Parsed pose #206 at 1747660625487 ms
+Parsed pose #207 at 1747660625577 ms
+Parsed pose #208 at 1747660625660 ms
+Parsed pose #209 at 1747660625749 ms
+Parsed pose #210 at 1747660625840 ms
+Parsed pose #211 at 1747660625935 ms
+Parsed pose #212 at 1747660626027 ms
+Parsed pose #213 at 1747660626120 ms
+Parsed pose #214 at 1747660626217 ms
+Parsed pose #215 at 1747660626308 ms
+Parsed pose #216 at 1747660626396 ms
+Parsed pose #217 at 1747660626485 ms
+Parsed pose #218 at 1747660626580 ms
+Parsed pose #219 at 1747660626669 ms
+Parsed pose #220 at 1747660626787 ms
+Parsed pose #221 at 1747660626904 ms
+Parsed pose #222 at 1747660627007 ms
+Parsed pose #223 at 1747660627101 ms
+Parsed pose #224 at 1747660627179 ms
+Parsed pose #225 at 1747660627269 ms
+Parsed pose #226 at 1747660627361 ms
+Parsed pose #227 at 1747660627444 ms
+Parsed pose #228 at 1747660627528 ms
+Parsed pose #229 at 1747660627612 ms
+Parsed pose #230 at 1747660627689 ms
+Parsed pose #231 at 1747660627776 ms
+Parsed pose #232 at 1747660627869 ms
+Parsed pose #233 at 1747660627949 ms
+Parsed pose #234 at 1747660628039 ms
+Parsed pose #235 at 1747660628129 ms
+Parsed pose #236 at 1747660628215 ms
+Parsed pose #237 at 1747660628292 ms
+Parsed pose #238 at 1747660628370 ms
+Parsed pose #239 at 1747660628447 ms
+Parsed pose #240 at 1747660628523 ms
+Parsed pose #241 at 1747660628610 ms
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+nothing received
+--- Debugging process stopped ---
